@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All employee</title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body>
+    <div class="table-container">
+        <h1>All Employee List :</h1>
+
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>salary</th>
+            <th>CRUD Buttons</th>
+        </tr>
+        <% for(employee of employees) { %>
+        <tr>
+            
+                <td><%= employee.id %></td>
+                <td><%= employee.name %></td>
+                <td><%= employee.email %></td>
+                <td><%= employee.salary %></td>
+                <td>
+                    <form method="get" action="/employee/new">
+                        <button id="addbnt">Add New</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="get" action="/employee/<%=employee.id %>/edit">
+                        <button id="editbtn">Edit</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="get" action="/employee/<%= employee.id%>/delete">
+                        <button id="deletebtn">Delete</button>
+                    </form>
+                </td>
+
+            
+        </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
+

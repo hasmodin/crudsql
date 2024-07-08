@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update employee</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="edit-container">
+        
+        <form method="post" action="/employee/<%= employee.id %>?_method=PATCH" >
+            <h1>Your are about to edit : <%= employee.email %></h1>
+            <textarea name="name" id="" rows="10" cols="25"><%= employee.name %> </textarea><br><br>
+            <input type="text" name="salary" placeholder="Enter Empployee salary" required><br><br>
+            <button id="ebtn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

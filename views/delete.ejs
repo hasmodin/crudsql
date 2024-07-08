@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleted</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="delete-container">
+        <h1>Delete Employee Record!</h1>
+        
+        <form method="post" action="/employee/<%=employee.id %>?_method=Delete">
+            <h2>You are about to Delete Employee record from DB : <%= employee.email %></h2>
+            <input type="text" name="salary" placeholder="Enter salary to delete" required><br><br>
+            <button id="dbtn">Delete</button>
+        </form>
+    </div>
+</body>
+</html>
